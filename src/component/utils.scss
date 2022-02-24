@@ -1,0 +1,63 @@
+
+@mixin utilDisabled() {
+  &[disabled], &:disabled, &[data-disabled] {
+    background: var(--disabled, gainsboro);
+    color: gray !important;
+    opacity: 0.7;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 5px 0px rgba(0,0,0,.12) !important;
+    &:hover {
+      filter: none !important;
+    }
+  }
+}
+
+@mixin shadow($transition) {
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 1px 5px 0px rgba(0,0,0,.12);
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), width 0.5s ease, $transition;
+  &:hover, &:focus {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0,0,0,.12);
+  }
+}
+
+.button {
+  background: var(--color, var(--main-80));
+  color: var(--bg, var(--main-20));
+  display: flex;
+  width: max-content;
+  height: 36px;
+  font-weight: 600;
+  gap: 6px;
+  padding: 0px 6px;
+  margin: 2px;
+  border-radius: 4px;
+  align-items: center;
+  cursor: pointer;
+  @include utilDisabled;
+  @include shadow(filter 0.2s);
+  &:hover, &:focus {
+    filter: saturate(1.5);
+  }
+  .iconify + p {
+    margin: 0 4px 0 0;
+  }
+  p {
+    margin: 0 4px;
+  }
+}
+
+.main-nav {
+  min-height: 56px;
+  background: #2F2F2F;
+  box-shadow: 0 6px 20px rgba(0,0,0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 12px;
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}

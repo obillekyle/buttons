@@ -1,0 +1,85 @@
+
+$main: orange;
+$secondary: #fff;
+$primary: #111;
+$shade: rgba(128, 128, 128, 0.1);
+
+
+:root {
+  --main-10: #{lighten($main, 40%)};
+  --main-20: #{lighten($main, 30%)};
+  --main-30: #{lighten($main, 20%)};
+  --main-40: #{lighten($main, 10%)};
+  --main-50: #{$main};
+  --main-60: #{darken($main, 10%)};
+  --main-70: #{darken($main, 20%)};
+  --main-80: #{darken($main, 30%)};
+  --main-90: #{darken($main, 40%)};
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --shade: #{$shade};
+}
+
+[data-color="main"] {
+  --bg: var(--main-20) !important;
+  --color: var(--main-80) !important;
+  --outline: var(--main-60) !important;
+  --disabled:  var(--main-10) !important;
+
+}
+
+[data-color="yellow"] {
+  --bg: hsl(51, 100%, 80% ) !important;
+  --color: hsl(51, 100%, 20% ) !important;
+  --outline: hsl(51, 100%, 40% ) !important;
+  --disabled:  hsl(51, 100%, 90% ) !important;
+}
+
+[data-color="green"] {
+  --bg: hsl(125, 100%, 90%) !important;
+  --color: hsl(125, 100%, 20%) !important;
+  --outline: hsl(125, 100%, 40%) !important;
+  --disabled:  hsl(125, 100%, 90%) !important;
+}
+
+[data-color="blue"] {
+  --bg: hsl(200, 100%, 90% ) !important;
+  --color: hsl(200, 100%, 20% ) !important;
+  --outline: hsl(200, 100%, 40% ) !important;
+  --disabled:  hsl(200, 100%, 90% ) !important;
+}
+
+[data-color="violet"] {
+  --bg: hsl(288, 100%, 90% ) !important;
+  --color: hsl(288, 100%, 15%) !important;
+  --outline: hsl(288, 100%, 40% ) !important;
+  --disabled:  hsl(288, 100%, 90% ) !important;
+}
+
+[data-color="red"] {
+  --bg: hsl(0, 100%, 90% ) !important;
+  --color: hsl(0, 100%, 20% ) !important;
+  --outline: hsl(0, 100%, 40% ) !important;
+  --disabled:  hsl(0, 100%, 90% ) !important;
+}
+
+[data-color="orange"] {
+  --bg: hsl(25, 100%, 90% ) !important;
+  --color: hsl(25, 100%, 20% ) !important;
+  --outline: hsl(25, 100%, 40% ) !important;
+  --disabled:  hsl(25, 100%, 90% ) !important;
+}
+
+[data-color="pink"] {
+  --bg: hsl(298, 100%, 90% ) !important;
+  --color: hsl(298, 100%, 20% ) !important;
+  --outline: hsl(298, 100%, 40% ) !important;
+  --disabled:  hsl(298, 100%, 90% ) !important;
+}
+
+[data-color="cyan"] {
+  --bg: hsl(176, 100%, 90% ) !important;
+  --color: hsl(176, 100%, 20% ) !important;
+  --outline: hsl(176, 100%, 40% ) !important;
+  --disabled:  hsl(167, 100%, 90% ) !important;
+}
