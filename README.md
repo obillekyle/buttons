@@ -5,5 +5,5 @@
 * `Yarn`
 * `Vite`
 
-##Installation
+## Installation
 * Open a terminal to a root folder and type `yarn install`
