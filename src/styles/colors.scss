@@ -1,0 +1,22 @@
+
+$secondary: #fff;
+$primary: #111;
+$shade: rgba(128, 128, 128, 0.1);
+
+
+:root {
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --shade: #{$shade};
+}
+
+
+.light {
+  --bg: #{$secondary};
+  --color: #{$primary};
+}
+
+.dark {
+  --bg: #{$primary};
+  --color: #{$secondary};
+}

@@ -4,7 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background: #212121;
+  overflow: none;
   font-family: 'Roboto', 'Helvetica Neue', arial, sans-serif;
   font-weight: 400;
   color: #fff;
@@ -14,8 +14,19 @@ body {
 
 * {
   box-sizing: border-box;
+  transition: color 0.2s, background-color 0.2s;
 }
-
+#app {
+  background: var(--bg, white);
+  color: var(--color, black);
+  height: 100vh;
+  overflow: auto;
+  header {    
+    display: flex;
+    flex-wrap: wrap;
+    grid-auto-columns: 1fr 1fr 1fr;
+  }
+}
 .iconify {
   font-size: 24px;
 }
